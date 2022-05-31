@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,12 +9,19 @@
 
     <!--============================== BOX ICONS ==============================-->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
 
     <title>Portfolio Stephane Website</title>
 </head>
 
-<body class="">
+<body class="loader">
+
+    
+    <div class="loading__container">
+        <div class="loading__container--spinner"></div>
+        <h1 class="loading__container--logospinner">StephaneDev</h1>
+    </div>
     <!--============================== HEADER ==============================-->
     <header class="l-header text-color">
         <nav class="nav bd-grid">
@@ -28,9 +35,8 @@
                     <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
-
-
-                    <!-- Theme button -->
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    <li class="nav__item"><a href="#latest" class="nav__link">Latest Projects</a></li>
 
                 </ul>
             </div>
@@ -175,6 +181,35 @@
             </div>
         </section>
 
+        <h2 class="section-title flex-center" id="latest">Latest Projects</h2>
+        <section class="position">
+            
+            <div class="container ">
+                <input type="radio" name="slider" id="item-1" checked>
+                <input type="radio" name="slider" id="item-2">
+                <input type="radio" name="slider" id="item-3">
+                <div class="cards">
+                    <label class="card" for="item-1" id="project-1">
+                        <img class="img" src="/assets/img/Intro 2.gif" alt="Project Cruella's Birthday Intro">
+                        <div class="subtitles text-color" >
+                            <h1>Cruella's Birthday Video, create by using Html and CSS Animations </br><a class="link-default text-color" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro"><i class='bx bxl-github'>GitHub Link</i></a></h1>
+                        </div>    
+                    </label>
+                    <label class="card" for="item-2" id="project-2">
+                        <img class="img" src="/assets/img/Transi.gif" alt="Project Cruella's Birthday Transition">
+                        <div class="subtitles text-color" >
+                            <h1>Cruella's Birthday Video, create by using Html and CSS Animations </br><i class='bx bxl-github'></i></h1>
+                        </div>        
+                    </label>
+                    <label class="card" for="item-3" id="project-3">
+                        <img class="img" src="/assets/img/Générique.gif" alt="Project Cruella's Birthday Generic">
+                        <div class="subtitles text-color" >
+                            <h1>Cruella's Birthday Video, create by using Html and CSS Animations </br><i class='bx bxl-github'></i></h1>
+                        </div>    
+                    </label>
+                </div>
+
+        </section>
         <!--============================== WORK ==============================-->
         <section class="work section" id="work">
 
@@ -202,6 +237,19 @@
             </div>
         </section>
 
+        <!--============================== CONTACT ==============================-->
+        <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+                <form action="" class="contact__form">
+                    <input type="text" placeholder="Name" class="contact__input">
+                    <input type="mail" placeholder="Email" class="contact__input">
+                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
+                    <input type="button" value="Send" class="contact__button button">
+                </form>
+            </div>
+        </section>
     </main>
 
     <!--============================== FOOTER ==============================-->
@@ -215,6 +263,8 @@
 
 
     </footer>
+
+
 
 
     <!--============================== SCRIPT PATH MAIN JS ==============================-->

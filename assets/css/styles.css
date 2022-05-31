@@ -12,29 +12,6 @@ html, body {
   height: 100%;
 }
 
-.cards {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 30em;
-}
-
-img {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.flex-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-
 /*===== VARIABLES CSS =====*/
 :root {
   --header-height: 3rem;
@@ -93,6 +70,264 @@ img {
 #change-theme:hover{
   color: var(--first-color);
 }
+
+
+
+input[type=radio] {
+  display: none;
+}
+
+.card {
+  position: absolute;
+  width: 60%;
+  height: 100%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  -webkit-transition: -webkit-transform .4s ease;
+  transition: -webkit-transform .4s ease;
+  transition: transform .4s ease;
+  transition: transform .4s ease, -webkit-transform .4s ease;
+  cursor: pointer;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  max-height: 600px;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          padding: 30px 10px;
+          font-family: 'DM Sans', sans-serif;
+          -webkit-transition: background .4s ease-in;
+          transition: background .4s ease-in;        
+}
+
+.link-default {
+  text-decoration: none;
+ 
+}
+.cards {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  margin-bottom: 30em;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#item-1:checked ~ .cards #project-3, #item-2:checked ~ .cards #project-1, #item-3:checked ~ .cards #project-2 {
+  -webkit-transform: translatex(-40%) scale(0.8);
+          transform: translatex(-40%) scale(0.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #project-2, #item-2:checked ~ .cards #project-3, #item-3:checked ~ .cards #project-1 {
+  -webkit-transform: translatex(40%) scale(0.8);
+          transform: translatex(40%) scale(0.8);
+  opacity: .4;
+  z-index: 0;
+}
+
+#item-1:checked ~ .cards #project-1, #item-2:checked ~ .cards #project-2, #item-3:checked ~ .cards #project-3 {
+  -webkit-transform: translatex(0) scale(1);
+          transform: translatex(0) scale(1);
+  opacity: 1;
+  z-index: 1;
+}
+
+#item-1:checked ~ .cards #project-1 img, #item-2:checked ~ .cards #project-2 img, #item-3:checked ~ .cards #project-3 img {
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+          box-shadow: 0px 0px 5px 0px rgba(81, 81, 81, 0.47);
+}
+
+.info-area {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 30px;
+  -webkit-transition: -webkit-transform .4s ease-in;
+  transition: -webkit-transform .4s ease-in;
+  transition: transform .4s ease-in;
+  transition: transform .4s ease-in, -webkit-transform .4s ease-in;
+}
+
+#item-2:checked ~ .player #test {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+#item-2:checked ~ .player #test {
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+}
+
+#item-3:checked ~ .player #test {
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
+}
+
+.position {
+  margin-bottom: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*======================================================================
+============================= Portfolio Loader =========================
+======================================================================*/
+
+/*Spinner Loading page*/
+.loading__container {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  animation      : cssAnimation2 0s 3s forwards;
+  
+
+/*cssAnimation while loading*/
+  visibility: visible;
+  position  : fixed;
+  top       : 0;
+  bottom    : 0;
+  left      : 0;
+  right     : 0;
+  z-index   : 10;
+/*cover the normal element lower z-index to show spinner only*/
+  background-color: #172a44;
+}
+
+.loading__container--logospinner {
+  font-size  : 2rem;
+  font-family: 'shrikhand';
+  color      : gray;
+  position   : absolute;
+}
+
+.loading__container--spinner {
+/*main element purple circle line*/
+  display          : block;
+  position         : relative;
+  width            : 235px;
+  height           : 235px;
+  border-radius    : 50%;
+  border           : 4px solid transparent;
+  border-top       : 4px solid #370253;
+  -webkit-animation: spin 2s linear infinite;
+  animation        : spin 2s linear infinite;
+}
+
+.loading__container--spinner::before,
+/*Pseudo element will be the first child of the main element*/
+.loading__container--spinner::after {
+/*Another Pseudo element last child of the main element*/
+content      : "";
+/*this allows the 2 other elements inside to appear in the main element*/
+  position     : absolute;
+  border-radius: 50%;
+  border       : 4px solid transparent;
+}
+
+.loading__container--spinner::before {
+  top              : 5px;
+  left             : 5px;
+  right            : 5px;
+  bottom           : 5px;
+  border-top-color : #3E6FF4;
+  -webkit-animation: spin 3s linear infinite;
+  animation        : spin 3s linear infinite;
+}
+
+.loading__container--spinner::after {
+  top              : 15px;
+  left             : 15px;
+  right            : 15px;
+  bottom           : 15px;
+  border-top-color : #370253;
+  -webkit-animation: spin 1.75s linear infinite;
+  -moz-animation   : spin 1.75s linear infinite;
+  animation        : spin 1.75s linear infinite;
+}
+/*///////// End Loader Spiner*/
+
+
+@-webkit-keyframes spin {
+from {
+    -webkit-transform: rotate(50deg);
+    -moz-transform   : rotate(50deg);
+    transform        : rotate(50deg);
+}
+
+to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform   : rotate(360deg);
+    transform        : rotate(360deg);
+}
+}
+
+
+@keyframes spin {
+from {
+    -webkit-transform: rotate(0deg);
+    -moz-transform   : rotate(0deg);
+    transform        : rotate(0deg);
+}
+
+to {
+    -webkit-transform: rotate(360deg);
+    -moz-transform   : rotate(360deg);
+    transform        : rotate(360deg);
+}
+}
+
+@keyframes cssAnimation2 {
+to {
+  visibility: hidden;
+  display   : none
+}
+}
+/*============================= End Of Portfolio Loader =========================*/
+
+
 
 @media screen and (min-width: 968px) {
   :root {
@@ -539,6 +774,8 @@ img {
   .contact__container {
     justify-items: center;
   }
+
+
 }
 
 @media screen and (min-width: 768px) {
