@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:100,200,300,400,500,600,700,800,900&display=swap");
 * {
@@ -43,10 +44,11 @@ html, body {
 }
 
 .picsContein {
-  height: 20em;
-  width: 16em;
+  left: 8em;
+  height: 14em;
+  width: 12em;
   box-sizing: border-box;
-  top: 22em;
+  top: 10em;
 }
 
 .profilePic {
@@ -71,8 +73,6 @@ html, body {
   color: var(--first-color);
 }
 
-
-
 input[type=radio] {
   display: none;
 }
@@ -91,6 +91,10 @@ input[type=radio] {
   cursor: pointer;
 }
 
+
+/*=========================================================================
+===================== Latest Section with CSS animations ==================
+=========================================================================*/
 .container {
   width: 100%;
   max-width: 800px;
@@ -134,7 +138,7 @@ input[type=radio] {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 30em;
+  margin-bottom: 12em;
 }
 
 img {
@@ -144,6 +148,17 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.work__img {
+  height: 18em;
+  width: 100%;
+ }
+ 
+ .imgSizing {
+   object-fit: cover;
+   height: 100%;
+   width: 100%;
+ }
 
 .flex-center {
   display: flex;
@@ -204,13 +219,28 @@ img {
           transform: translateY(-80px);
 }
 
+.subtitles {
+  width: 100%;
+  margin-top: 1em;
+  font-size: 0.6em;
+  font-family: 'DM Sans';
+  font-weight: lighter;
+  box-shadow: 0 1px 20px rgba(33, 150, 121, 0.452);
+  padding: 1em;
+  color: rgba(0, 0, 0, 0.822);
+  background: linear-gradient(90deg, rgb(55, 3, 104) 0%, rgb(55, 2, 59) 74%);
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 .position {
   margin-bottom: 4em;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 /*======================================================================
 ============================= Portfolio Loader =========================
@@ -239,7 +269,7 @@ img {
 .loading__container--logospinner {
   font-size  : 2rem;
   font-family: 'shrikhand';
-  color      : gray;
+  color      : #3E6FF4;
   position   : absolute;
 }
 
@@ -327,6 +357,73 @@ to {
 }
 /*============================= End Of Portfolio Loader =========================*/
 
+
+/*=========================================================================
+============================= Dark & Light Themes =========================
+=========================================================================*/
+
+
+/*========== 
+	  Color changes in some parts of 
+	  the website, in Light / Dark theme
+  ==========*/
+
+  body.dark-theme {
+    background-color: #15202B;
+  }
+  
+  .dark-theme .l-header  {
+    background-color: #172a44;
+    z-index: 5;
+    color: #fff;
+  }
+  
+  
+  .dark-theme .text-color  { 
+    color: #fff;
+  }
+  
+  .dark-theme .about__subtitle {
+    color: var(--first-color);
+  }
+  
+  .dark-theme .skills__subtitle {
+    color: var(--first-color);
+  }
+  
+  .dark-theme .skills__icon {
+    color: var(--first-color);
+  }
+  
+  .dark-theme .nav__link {
+    color: #ffffff;
+  }
+  
+  .dark-theme .nav__menu {
+    background-color: #172a44;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(17, 150, 150, 0.47);
+    box-shadow: 0px 0px 5px 0px rgba(17, 150, 150, 0.47);
+  }
+  
+  .dark-theme .button__gray:hover {
+    background-color: hsl(var(--hue), 24%, 16%);
+  }
+  
+  /*============================== Light theme ==============================*/
+  body.light-theme {
+    background-color:aliceblue;
+    height: 100%;
+  }
+  
+  .light-theme .text-color {
+    --second-color: hsl(var(--hue-color), 56%, 12%);
+  }
+
+
+
+  .light-theme .nav__link {
+    color: #15202B;
+  }
 
 
 @media screen and (min-width: 968px) {
@@ -429,6 +526,14 @@ img {
   font-weight: var(--font-semi);
 }
 
+.picsContein {
+  left: 5em;
+  height: 16em;
+  width: 14em;
+  box-sizing: border-box;
+  margin-top: 8em;
+}
+
 @media screen and (max-width: 767px) {
   .nav__menu {
     position: fixed;
@@ -448,7 +553,6 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
 }
 
 .nav__link:hover {
@@ -732,6 +836,14 @@ img {
   .home__img {
     width: 200px;
   }
+
+  .picsContein {
+    left: 5em;
+    height: 12em;
+    width: 10em;
+    box-sizing: border-box;
+    top: 8em;
+  }
 }
 
 @media screen and (min-width: 576px) {
@@ -775,7 +887,16 @@ img {
     justify-items: center;
   }
 
+  .picsContein {
+    top: 15em;
+    margin-top: 0em;
+    left: 20em;
+  }
 
+  .dark-theme .nav__menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -833,6 +954,17 @@ img {
     grid-template-columns: repeat(3, 1fr);
     column-gap: 2rem;
   }
+
+  .picsContein {
+    top: 8em;
+    left: 34em;
+  }
+
+  .dark-theme .nav__menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
 }
 
 @media screen and (min-width: 992px) {
@@ -846,6 +978,17 @@ img {
   .home__img {
     width: 450px;
   }
+
+  .picsContein {
+    margin-top: 2em;
+    left: 44em;
+  }
+
+  .dark-theme .nav__menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
 }
   
 
@@ -857,6 +1000,16 @@ img {
   }
   .home__img {
     width: 450px;
+  }
+
+  .picsContein {
+    top: 10em;
+    left: 48em;
+  }
+
+  .dark-theme .nav__menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
   }
 }
 
@@ -914,5 +1067,10 @@ img {
      height: 100%;
      width: 100%;
    }
+
+   .dark-theme .nav__menu {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
 }
 
