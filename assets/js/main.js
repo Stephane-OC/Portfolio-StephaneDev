@@ -57,7 +57,6 @@ function scrollActive(){
 
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
-const lightTheme = 'light-theme'
 const iconTheme = 'ri-sun-line'
 const iconTheme2 = 'ri-moon-line'
 
@@ -73,7 +72,6 @@ const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moo
 if (selectedTheme) {
   // If the validation is fulfilled, we ask if we activated or deactivated the Dark theme
   document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  document.body.classList[selectedTheme === 'light' ? 'add' : 'remove'](lightTheme)
   themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
   
 }
@@ -82,7 +80,6 @@ if (selectedTheme) {
 themeButton.addEventListener('click', () => {
     // Add or remove the Dark or Light / icon theme
     document.body.classList.toggle(darkTheme)
-    document.body.classList.toggle(lightTheme)
     themeButton.classList.toggle(iconTheme)
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
