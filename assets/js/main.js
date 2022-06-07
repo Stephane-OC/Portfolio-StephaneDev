@@ -12,7 +12,6 @@ const showMenu = (toggleId, navId) =>{
 showMenu('nav-toggle','nav-menu')
 
 
-
 /*==================== REMOVE MENU MOBILE ====================*/
 const navLink = document.querySelectorAll('.nav__link')
 
@@ -41,10 +40,6 @@ function scrollActive(){
         }
     })
 }
-
-
-
-
 
 
 
@@ -85,5 +80,24 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+
+
+
+
+
+const frButton = document.getElementById('frSwitch')
+const frLanguage = 'fr-lang'
+
+const getCurrentLangFr = () => document.body.classList.contains(frLanguage) ? 'fr-l': 'en-l'
+
+frButton.addEventListener('click', () => {
+    document.body.classList.toggle(frLanguage)
+
+})
+
+
+
+
 
 

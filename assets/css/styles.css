@@ -236,7 +236,7 @@ img {
   font-weight: lighter;
   box-shadow: 0 1px 20px rgba(33, 150, 121, 0.452);
   padding: 1em;
-  color: rgba(0, 0, 0, 0.822);
+  color: white;
   background: linear-gradient(90deg, rgb(55, 3, 104) 0%, rgb(55, 2, 59) 74%);
   border-radius: 10px;
   align-items: center;
@@ -424,9 +424,60 @@ body.dark-theme {
   background-color: hsl(var(--hue), 24%, 16%);
 }
 
+.dark-theme .skills__data {
+  box-shadow: 0px 4px 15px rgba(58, 164, 226, 0.973);
+}
+
 .dark-theme .contact__input {
   box-shadow: 0px 4px 25px rgba(29, 163, 241, 0.952);
 }
+
+.dark-theme .work__img {
+  box-shadow: 0px 4px 15px rgba(58, 164, 226, 0.973);
+}
+
+.dark-theme .card .img {
+  box-shadow: 0px 4px 15px rgba(58, 164, 226, 0.973);
+}
+
+.dark-theme .button {
+  box-shadow: 0px 4px 15px rgba(58, 164, 226, 0.973);
+}
+
+.dark-theme .profilePic {
+  box-shadow: 0px 4px 15px rgba(58, 164, 226, 0.973);
+}
+
+.dark-theme footer {
+  box-shadow: 0px 4px 15px rgba(58, 164, 226, 0.973);
+}
+/*=========================================================================
+======================== Fr and En Language Switch ========================
+====Some Class are added or removed with JS to change Website language=====
+=========================================================================*/
+
+
+.fr-lang .en-l {
+  display: none;
+}
+
+.fr-lang .fr-l {
+  display: block;
+}
+
+
+.en-lang .fr-l {
+  display: none;
+}
+
+.en-lang .en-l {
+  display: block;
+}
+
+.fr-l {
+  display: none;
+}
+
 
 
 /*===== BASE =====*/
@@ -523,6 +574,7 @@ img {
   align-items: center;
   font-weight: var(--font-semi);
 }
+
 
 .picsContein {
   margin-left: 0em;

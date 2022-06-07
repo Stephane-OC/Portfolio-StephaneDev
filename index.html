@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en, fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 
     <!--============================== BOX ICONS ==============================-->
     <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
@@ -19,10 +19,7 @@
 
     <!--============================== HEADER ==============================-->
     <header class="l-header text-color">
-        <div class="loading__container">
-            <div class="loading__container--spinner"></div>
-            <h1 class="loading__container--logospinner">StephaneDev</h1>
-        </div>
+
         <nav class="nav bd-grid">
             <div>
                 <a href="#" class="nav__logo">Stephane</a>
@@ -36,9 +33,7 @@
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     <li class="nav__item"><a href="#latest" class="nav__link">Latest Projects</a></li>
-                    <li class="nav__item"><i class="nav__link ri-moon-line change-theme " id="theme-button"></i></li>
-
-                    <!-- Theme button -->
+                    <li class="nav__item"><i class="nav__link ri-moon-line change-theme" id="theme-button"></i></li>
 
                 </ul>
             </div>
@@ -53,10 +48,12 @@
         <!--============================== HOME ==============================-->
         <section class="home bd-grid" id="home">
             <div class="home__data text-color">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Stephane</span><br>I'm a Web Developpeur</h1>
+                <h1 class="home__title en-l">Hi,<br>I'am <span class="home__title-color en-l">Stephane</span><br>I'm a Web Developpeur</h1>
+                <h1 class="home__title fr-l">Salut, Je suis <span class="home__title-color fr-l">Stephane</span><br>Developeur Front End Junior</h1>
 
-                <a href="#" class="button bottom">Contact</a>
-                <a href="#" class="button">Upload My CV</a>
+                <a href="mailto:stephane.fons.pro@gmail.com" class="button bottom">Contact</a>
+                <a href="assets/pdf/CV Stephane Fons.pdf" class="button"
+                    download="CV Stephane Fons.pdf">My CV</a>
             </div>
 
             <div class="home__social">
@@ -73,16 +70,17 @@
 
         <!--============================== ABOUT ==============================-->
         <section class="about section " id="about">
-            <h2 class="section-title">About</h2>
+            <h2 class="section-title en-l">About me</h2>
+            <h2 class="section-title fr-l">A propos de moi</h2>
 
             <div class="about__container bd-grid">
                 <div class="about__img">
                     <img src="" alt="">
                 </div>
 
-                <div>
-                    <h2 class="about__subtitle">I'am Stephane</h2>
-                    <p class="about__text text-color">I'm passionate by Web Developement.
+                <div class="en-l">
+                    <h2 class="about__subtitle en-l">I'm Stephane</h2>
+                    <p class="about__text text-color en-l">I'm passionate by Web Developement.
                         I started my journey by do some interview to validate my new career plans.
                         So my journey begun ! I've been accepted to OpenClassrooms students promo.
                         I gave everething i had to learn the mutch i can and so i could be ready to have all the skills
@@ -92,17 +90,36 @@
                         This is just the begining of my new Web Developeur life, and i hope you will be part of mine ! !
                     </p>
                 </div>
+                <div class="fr-l">
+                    <h2 class="about__subtitle fr-l">Je m'appelle Stephane</h2>
+                    <p class="about__text text-color fr-l">Je suis passionné par le Developement !
+                        Mon voyage dans ce monde a d'abord commencer par des rencontres pour valider mon nouveau plan de carrière.
+                        J'ai eu la chance d'être accepter dans les promos d'étudiants d'OpenClassrooms !
+                        J'ai tout donner pour apprendre le plus que je pouvais et aquérir énormément de nouvelles compétences
+                        d'on j'avais besoins pour commencer ma carrière de Developeur FrondEnd Junior !
+                        Mes examens ont tous étaient un succès à chaques fois avec les félicitations de mes évalutateurs !
+                        Ma motivation et ma détermination m'ont fait passer l'examen final avec les félicitations du jury !
+                        C'est le commencement de ma nouvelle vie de Developeur FrondEnd, et j'espère que vous en ferez partis ! !
+                    </p>
+                </div>
             </div>
+
+
+        </div>
         </section>
 
         <!--============================== SKILLS ==============================-->
         <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+            <h2 class="section-title fr-l">Compétences</h2>
 
             <div class="skills__container bd-grid">
                 <div>
-                    <h2 class="skills__subtitle">Profesional Skills</h2>
-                    <p class="skills__text text-color">Here you can see an estimation of my professionnal skills
+                    <h2 class="skills__subtitle en-l">Profesional Skills</h2>
+                    <p class="skills__text text-color en-l">Here you can see an estimation of my professionnal skills
+                    </p>
+
+                    <h2 class="skills__subtitle fr-l">Compétences professionnelles</h2>
+                    <p class="skills__text text-color fr-l">Vous pouvez ici vous faire une idée de mon niveau de compétences
                     </p>
                     <div class="skills__data text-color">
                         <div class="skills__names">
@@ -184,37 +201,57 @@
             </div>
         </section>
 
-        <h2 class="section-title flex-center" id="latest">Latest Projects</h2>
+        <h2 class="section-title flex-center en-l" id="latest">Latest Projects</h2>
+        <h2 class="section-title flex-center fr-l" id="latest">Derniers Projets</h2>
         <section class="position">
             
-            <div class="container ">
+            <div class="container">
                 <input type="radio" name="slider" id="item-1" checked>
                 <input type="radio" name="slider" id="item-2">
                 <input type="radio" name="slider" id="item-3">
                 <div class="cards">
                     <label class="card" for="item-1" id="project-1">
                         <img class="img" src="assets/img/Intro 2.gif" alt="Project Cruella's Birthday Intro">
-                        <div class="subtitles text-color" >
-                            <h1>Cruella's Birthday Video, create by using Html and CSS Animations </br>
-                                <a class="link-default text-color" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro">
-                                    <i class='link-color bx bxl-github'>GitHub Link</i></a></h1>
-                        </div>    
+                        <div class="subtitles text-color en-l" >
+                            <h1 class="en-l">Cruella's Birthday Video, create by using Html and CSS Animations </br>
+                                <a class="link-default text-color en-l" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro">
+                                    <i class='link-color bx bxl-github en-l'>GitHub Link</i></a></h1>
+                        </div>
+                        
+                        <div class="subtitles text-color fr-l" >
+                            <h1 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS </br>
+                                <a class="link-default text-color fr-l" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro">
+                                    <i class='link-color bx bxl-github fr-l'>Lien GitHub</i></a></h1>
+                        </div>
                     </label>
                     <label class="card" for="item-2" id="project-2">
                         <img class="img" src="assets/img/Transi.gif" alt="Project Cruella's Birthday Transition">
-                        <div class="subtitles text-color" >
-                            <h1>Cruella's Birthday Video, create by using Html and CSS Animations </br>
-                                <a class="link-default text-color" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
-                                    <i class='link-color bx bxl-github'>GitHub Link</i></a></h1>
-                        </div>       
+                        <div class="subtitles text-color en-l" >
+                            <h1 class=" en-l">Cruella's Birthday Video, create by using Html and CSS Animations </br>
+                                <a class="link-default text-color en-l" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
+                                    <i class='link-color bx bxl-github en-l'>GitHub Link</i></a></h1>
+                        </div>
+                        
+                        <div class="subtitles text-color fr-l" >
+                            <h1 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</br>
+                                <a class="link-default text-color fr-l" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
+                                    <i class='link-color bx bxl-github fr-l'>Lien GitHub</i></a></h1>
+                        </div>
+                        
                     </label>
                     <label class="card" for="item-3" id="project-3">
                         <img class="img" src="assets/img/Générique.gif" alt="Project Cruella's Birthday Generic">
-                        <div class="subtitles text-color" >
-                            <h1>Cruella's Birthday Video, create by using Html and CSS Animations </br>
-                                <a class="link-default text-color" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Generic">
-                                    <i class='link-color bx bxl-github'>GitHub Link</i></a></h1>
-                        </div>    
+                        <div class="subtitles text-color en-l" >
+                            <h1 class="en-l">Cruella's Birthday Video, create by using Html and CSS Animations </br>
+                                <a class="link-default text-color en-l" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Generic">
+                                    <i class='link-color bx bxl-github en-l'>GitHub Link</i></a></h1>
+                        </div>
+                        
+                        <div class="subtitles text-color fr-l" >
+                            <h1 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</br>
+                                <a class="link-default text-color fr-l" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Generic">
+                                    <i class='link-color bx bxl-github fr-l'>Lien GitHub</i></a></h1>
+                        </div> 
                     </label>
                 </div>
 
@@ -222,7 +259,8 @@
         <!--============================== WORK ==============================-->
         <section class="work section" id="work">
 
-            <h2 class="section-title flex-center">Work</h2>
+            <h2 class="section-title flex-center en-l">Work</h2>
+            <h2 class="section-title flex-center fr-l">Mes Projets</h2>
 
             <div class="work__container bd-grid flex-center">
                 <a href="#" class="work__img">
@@ -270,11 +308,15 @@
             <a href="#" class="footer__icon"><i class='bx bxl-twitter'></i></a>
         </div>
 
+        <div class="footer__social flex-center">
+            <a href="#" id="frSwitch" class="footer__icon en-l">French Website</a>
+            <a href="#" id="enSwitch" class="footer__icon en-l">English Website</a>
+
+            <a href="#" id="frSwitch" class="footer__icon fr-l">Site en Français</a>
+            <a href="#" id="enSwitch" class="footer__icon fr-l">Site en Anglais</a>
+        </div>
 
     </footer>
-
-
-
 
     <!--============================== SCRIPT PATH MAIN JS ==============================-->
     <script src="assets/js/main.js"></script>
