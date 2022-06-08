@@ -32,7 +32,10 @@
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    <li class="nav__item"><a href="#latest" class="nav__link">Latest Projects</a></li>
+                    <li class="nav__item">
+                        <a href="#latest" class="nav__link en-l">Latest Projects</a>
+                        <a href="#Derniers" class="nav__link fr-l">Derniers Projets</a>
+                    </li>
                     <li class="nav__item"><i class="nav__link ri-moon-line change-theme" id="theme-button"></i></li>
 
                 </ul>
@@ -53,7 +56,7 @@
 
                 <a href="mailto:stephane.fons.pro@gmail.com" class="button bottom">Contact</a>
                 <a href="assets/pdf/CV Stephane Fons.pdf" class="button"
-                    download="CV Stephane Fons.pdf">My CV</a>
+                    download="CV Stephane Fons.pdf">Download CV</a>
             </div>
 
             <div class="home__social">
@@ -202,7 +205,7 @@
         </section>
 
         <h2 class="section-title flex-center en-l" id="latest">Latest Projects</h2>
-        <h2 class="section-title flex-center fr-l" id="latest">Derniers Projets</h2>
+        <h2 class="section-title flex-center fr-l" id="Derniers">Derniers Projets</h2>
         <section class="position">
             
             <div class="container">
@@ -287,15 +290,43 @@
         <!--============================== CONTACT ==============================-->
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
-
             <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Send" class="contact__button button">
-                </form>
+                <div class="about__img">
+                    <img src="" alt="">
+                </div>
+
+                <div class="en-l">
+                    <h2 class="contact__subtitle en-l">Keep on touch !</h2>
+                    <p class="contact__text text-color en-l">If my you like my profile
+                        and you want to keep on touch i'm oppen to any opportunities !
+                        If you also just want to say hey and share your experience, you can send me a e-mail !
+                        We have the gretest community, so it's also about being together that make the best of us !
+                        I'm always aware of new contents, and i'm open to new ways to learn and groth in my life.
+                        So if you want to share about your experience that will be a pleasure !
+                    </p>
+                </div>
+                <div class="fr-l flex-center">
+                    <h2 class="contact__subtitle fr-l">Restons en contact !</h2>
+                    <p class="contact__text text-color fr-l"> Si tu aimes mon profil 
+                        restons en contact je suis ouvert à de nouvelles opportunités !
+                        Si tu veux juste m'envoyer un message pour partager ton expérience, tu peux m'envoyer un e-mail !
+                        Nous avons la plus belle des communautés et c'est être ensemble qui nous fait donner le meilleurs de nous !
+                        Je suis toujours au fait de nouveaux contenus, et je suis ouvert à de nouvelles manières d'apprendre pour grandir
+                        dans ma vie et ma carrière de Développeur FrontEnd !
+                        Donc si tu as envie de partager ton expérience avec moi, ça sera avec grand plaisir !
+                    </p>
+                </div>
+                <div class="contact__data text-color">
+ 
+                    <a href="mailto:stephane.fons.pro@gmail.com" class="button bottom">Contact</a>
+                    <a href="assets/pdf/CV Stephane Fons.pdf" class="button"
+                        download="CV Stephane Fons.pdf">Download CV</a>
+
             </div>
+
+            
+
+        </div>
         </section>
     </main>
 
@@ -309,11 +340,10 @@
         </div>
 
         <div class="footer__social flex-center">
-            <a href="#" id="frSwitch" class="footer__icon en-l">French Website</a>
-            <a href="#" id="enSwitch" class="footer__icon en-l">English Website</a>
+            <a href="#" id="frSwitch" class="footer__lang">Fr Website</a>
+            <a href="#" id="enSwitch" class="footer__lang">En Website</a>
 
-            <a href="#" id="frSwitch" class="footer__icon fr-l">Site en Français</a>
-            <a href="#" id="enSwitch" class="footer__icon fr-l">Site en Anglais</a>
+
         </div>
 
     </footer>

@@ -1,3 +1,9 @@
+/*=============================================================
+======================== Menu Handler   =======================
+================= here he is shawn or hide ====================
+================ By clicking on the toggle ====================
+=============================================================*/
+
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
@@ -76,28 +82,39 @@ themeButton.addEventListener('click', () => {
     // Add or remove the Dark or Light / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
+    // We save the theme and the current icon that the user choose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
 
 
-
+/*=============================================================
+================== Website language handled ===================
+================== with JavaScript, on click ==================
+=========== French or English language will change ============
+=============================================================*/
 
 
 const frButton = document.getElementById('frSwitch')
 const frLanguage = 'fr-lang'
 
-const getCurrentLangFr = () => document.body.classList.contains(frLanguage) ? 'fr-l': 'en-l'
+const enButton = document.getElementById('enSwitch')
+const enLanguage = 'en-lang'
 
+
+// Fr Language Button Switch
 frButton.addEventListener('click', () => {
     document.body.classList.toggle(frLanguage)
-
+    document.body.classList.remove(enLanguage)
+    
 })
 
 
 
+// En Language Button Swith
+enButton.addEventListener('click', () => {
+    document.body.classList.toggle(enLanguage)
+    document.body.classList.remove(frLanguage)
 
-
-
+})

@@ -260,6 +260,12 @@ img {
   margin-bottom: 0.2em;
 }
 
+.contact__container {
+  
+  align-items: center;
+  text-align: initial;
+}
+
 /*======================================================================
 ============================= Portfolio Loader =========================
 ======================================================================*/
@@ -333,6 +339,11 @@ img {
   -webkit-animation: spin 1.75s linear infinite;
   -moz-animation: spin 1.75s linear infinite;
   animation: spin 1.75s linear infinite;
+}
+
+.contact__subtitle {
+  color: var(--first-color);
+  margin-bottom: 1.5em;
 }
 
 /*///////// End Loader Spiner*/
@@ -712,6 +723,11 @@ img {
   object-fit: cover;
 }
 
+.contact__data {
+  align-self: center;
+  margin-top: 2em;
+}
+
 /*BUTTONS*/
 .button {
   display: inline-block;
@@ -873,6 +889,14 @@ img {
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+}
+
+.footer__lang {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 var(--mb-2);
+  color: burlywood;
+  
 }
 
 .footer__title {
