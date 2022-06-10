@@ -1,10 +1,8 @@
 /*=============================================================
-======================== Menu Handler   =======================
-================= here he is shawn or hide ====================
-================ By clicking on the toggle ====================
+========================  Menu Show ===========================
+=================== Handler, you can here =====================
+========== hide or show the menu on mobile mode ===============
 =============================================================*/
-
-/*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
     nav = document.getElementById(navId)
@@ -82,7 +80,7 @@ themeButton.addEventListener('click', () => {
     // Add or remove the Dark or Light / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user choose
+    // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
