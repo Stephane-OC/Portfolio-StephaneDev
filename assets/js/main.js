@@ -116,3 +116,38 @@ enButton.addEventListener('click', () => {
     document.body.classList.remove(frLanguage)
 
 })
+
+
+
+/*const frButton = document.getElementById('frSwitch')
+const frLanguage = 'fr-lang'
+
+const getCurrentLangFr = () => document.body.classList.contains(frLanguage) ? 'en-l': 'fr-l'
+
+frButton.addEventListener('click', () => {
+    document.body.classList.toggle(frLanguage)
+
+})
+console.log(frButton)
+
+
+
+
+
+
+const enButton = document.getElementById('enSwitch')
+const enLanguage = 'en-lang'
+const currentLangEn= localStorage.getItem('current-lang')
+
+const getCurrentLangEn = () => document.body.classList.contains(frLanguage) ? 'fr-l': 'en-l'
+
+if (currentLangEn) {
+    document.body.classList[currentLangEn === 'en-l' ? 'remove' : 'add'](enLanguage)
+}
+
+enButton.addEventListener('click', () => {
+    document.body.classList.toggle(enLanguage)
+    document.body.classList.remove(frLanguage)
+    localStorage.setItem('curent-lang', getCurrentLangEn())
+
+})*/
