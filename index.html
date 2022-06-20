@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="en, fr">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="assets/css/styles.min.css">
 
     <!--============================== BOX ICONS ==============================-->
@@ -19,10 +18,16 @@
 
     <!--============================== HEADER ==============================-->
     <header class="l-header text-color">
-        <div class="loading__container">
-            <div class="loading__container--spinner"></div>
-            <h1 class="loading__container--logospinner">StephaneDev</h1>
+        
+       <div id="app">
+            <div id="wrapper">
+                <!-- Text and data-text have to be the same size on this animation -->
+                <h1 class="distort" data-text="
+                Stephane-Dev">Stephane-Dev</h1>
+                <span class="sub">Front-End Developer</span>
+            </div>
         </div>
+
         <nav class="nav bd-grid">
             <div>
                 <a href="#" class="nav__logo">Stephane</a>
@@ -37,7 +42,7 @@
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                     <li class="nav__item">
                         <a href="#latest" class="nav__link en-l">Latest Projects</a>
-                        <a href="#Derniers" class="nav__link fr-l">Derniers Projets</a>
+                        <a lang="fr" href="#Derniers" class="nav__link fr-l">Derniers Projets</a>
                     </li>
                     <li class="nav__item"><i class="nav__link ri-moon-line change-theme" id="theme-button"></i></li>
 
@@ -55,10 +60,10 @@
         <section class="home bd-grid" id="home">
             <div class="home__data text-color">
                 <h1 class="home__title en-l">Hi,<br>I'm <span class="home__title-color en-l">Stephen</span><br>I'm a Web Developpeur</h1>
-                <h1 class="home__title fr-l">Salut, Je suis <span class="home__title-color fr-l">Stephane</span><br>Developeur Front End Junior</h1>
+                <h1 lang="fr" class="home__title fr-l">Salut, Je suis <span class="home__title-color fr-l">Stephane</span><br>Developeur Front End Junior</h1>
 
-                <a href="mailto:stephane.fons.pro@gmail.com" class="button bottom">Contact</a>
-                <a href="assets/pdf/CV Stephane Fons.pdf" class="button"
+                <a href="mailto:contact@stephane-dev.com" class="button bottom">Contact</a>
+                <a href="assets/pdf/CV_Stephane_Fons.pdf" class="button"
                     download="CV Stephane Fons.pdf">Download CV</a>
             </div>
 
@@ -77,12 +82,9 @@
         <!--============================== ABOUT ==============================-->
         <section class="about section " id="about">
             <h2 class="section-title en-l">About me</h2>
-            <h2 class="section-title fr-l">A propos de moi</h2>
+            <h2 lang="fr" class="section-title fr-l">A propos de moi</h2>
 
             <div class="about__container bd-grid">
-                <div class="about__img">
-                    <img src="" alt="">
-                </div>
 
                 <div class="en-l">
                     <h2 class="about__subtitle en-l">I'm Stephane</h2>
@@ -96,9 +98,9 @@
                         This is just the beginning of my new Web Developeur life, and i hope you will be part of mine ! !
                     </p>
                 </div>
-                <div class="fr-l">
-                    <h2 class="about__subtitle fr-l">Je m'appelle Stephane</h2>
-                    <p class="about__text text-color fr-l">Je suis passionné par le Developpement !
+                <div lang="fr" class="fr-l">
+                    <h2 lang="fr" class="about__subtitle fr-l">Je m'appelle Stephane</h2>
+                    <p lang="fr" class="about__text text-color fr-l">Je suis passionné par le Developpement !
                         Mon voyage dans ce monde a d'abord commencé par des rencontres pour valider mon nouveau plan de carrière.
                         J'ai eu la chance d'être accepté dans les promos d'étudiants d'OpenClassrooms !
                         J'ai tout donné pour apprendre le plus que je pouvais et acquérir énormément de nouvelles compétences
@@ -109,14 +111,11 @@
                     </p>
                 </div>
             </div>
-
-
-        </div>
         </section>
 
         <!--============================== SKILLS ==============================-->
         <section class="skills section" id="skills">
-            <h2 class="section-title fr-l">Compétences</h2>
+            <h2 lang="fr" class="section-title fr-l">Compétences</h2>
 
             <div class="skills__container bd-grid">
                 <div>
@@ -124,8 +123,8 @@
                     <p class="skills__text text-color en-l">Here you can see an estimation of my professionnal skills
                     </p>
 
-                    <h2 class="skills__subtitle fr-l">Compétences professionnelles</h2>
-                    <p class="skills__text text-color fr-l">Vous pouvez ici vous faire une idée de mon niveau de compétences
+                    <h2 lang="fr" class="skills__subtitle fr-l">Compétences professionnelles</h2>
+                    <p lang="fr" class="skills__text text-color fr-l">Vous pouvez ici vous faire une idée de mon niveau de compétences
                     </p>
                     <div class="skills__data text-color">
                         <div class="skills__names">
@@ -200,86 +199,62 @@
                         </div>
                     </div>
                 </div>
-
-                <div>
-                    <img src="" alt="" class="skills__img">
-                </div>
             </div>
         </section>
 
         <h2 class="section-title flex-center en-l" id="latest">Latest Projects</h2>
-        <h2 class="section-title flex-center fr-l" id="Derniers">Derniers Projets</h2>
+        <h2 lang="fr" class="section-title flex-center fr-l" id="Derniers">Derniers Projets</h2>
         <section class="position">
             
             <div class="container">
+                
                 <input type="radio" name="slider" id="item-1" checked>
                 <input type="radio" name="slider" id="item-2">
                 <input type="radio" name="slider" id="item-3">
                 <div class="cards">
                     <label class="card" for="item-1" id="project-1">
                         <img class="img" src="assets/img/Intro.gif" alt="Project Cruella's Birthday Intro">
-                        <div class="subtitles text-color en-l" >
-                            <h1 class="en-l">Cruella's Birthday Video, create by using Html and CSS Animations</h1>
-                                <a class="link-default text-color en-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro">
-                                    <h1><i class='link-color bx bxl-github en-l'>GitHub Link</i></a></h1>
-                                <a class="link-default text-color en-l" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Intro/">    
-                                    <h1><i class='link-color bx bx-link-external en-l'>Page Link</i></a></h1>
-                                    
-                        </div>
-                        
-                        <div class="subtitles text-color fr-l" >
-                            <h1 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h1>
-                                <a class="link-default text-color fr-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro">
-                                    <h1><i class='link-color bx bxl-github fr-l'>Lien GitHub</i></a></h1>
-                                <a class="link-default text-color fr-l" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Intro/">    
-                                    <h1><i class='link-color bx bx-link-external fr-l'>Lien de page</i></a></h1>    
-                        </div>
+
                     </label>
+
                     <label class="card" for="item-2" id="project-2">
                         <img class="img" src="assets/img/Transi.gif" alt="Project Cruella's Birthday Transition">
-                        <div class="subtitles text-color en-l flex-column" >
-                            <h1 class=" en-l">Cruella's Birthday Video, create by using Html and CSS Animations</h1>
-                                <a class="link-default text-color en-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
-                                    <h1><i class='link-color bx bxl-github en-l'>GitHub Link</i></a></h1>
-                                <a class="link-default text-color en-l" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Transitions/">    
-                                    <h1><i class='link-color bx bx-link-external en-l'>Page Link</i></a></h1>    
-                        </div>
-                        
-                        <div class="subtitles text-color fr-l" >
-                            <h1 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h1>
-                                <a class="link-default text-color fr-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
-                                    <h1><i class='link-color bx bxl-github fr-l'>Lien GitHub</i></a></h1>
-                                <a class="link-default text-color fr-l" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Transitions/">    
-                                    <h1><i class='link-color bx bx-link-external fr-l'>Lien de page</i></a></h1>
-                        </div>
-                        
+
                     </label>
+
                     <label class="card" for="item-3" id="project-3">
                         <img class="img" src="assets/img/Générique.gif" alt="Project Cruella's Birthday Generic">
-                        <div class="subtitles text-color en-l" >
-                            <h1 class="en-l">Cruella's Birthday Video, create by using Html and CSS Animations</h1>
-                                <a class="link-default text-color en-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Generic">
-                                    <h1><i class='link-color bx bxl-github en-l'>GitHub Link</i></a></h1>
-                                <a class="link-default text-color en-l" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Generic/">    
-                                    <h1><i class='link-color bx bx-link-external en-l'>Page Link</i></a></h1>    
-                        </div>
-                        
-                        <div class="subtitles text-color fr-l" >
-                            <h1 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h1>
-                                <a class="link-default text-color fr-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Generic">
-                                    <h1><i class='link-color bx bxl-github fr-l'>Lien GitHub</i></a></h1>
-                                <a class="link-default text-color fr-l"  target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Generic/">    
-                                    <h1><i class='link-color bx bx-link-external fr-l'>Lien de page</i></a></h1>    
-                        </div> 
+
                     </label>
                 </div>
+                <!--<video class="flex-center" width="520" height="292" controls autoplay muted>
+                    <source src="assets/video/Cruella's_Birthday_Vidéo.mp4" type="video/mp4">
+                </video>!-->
+                <div class="subtitles text-color en-l flex-column" >
+                    <h2 class=" en-l">Cruella's Birthday Video, create by using Html and CSS Animations</h2>
+                        <a class="link-default text-color en-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
+                            <h2><i class='link-color bx bxl-github en-l'>GitHub Link</i></h2></a>
+                        <a class="link-default text-color en-l" target="_blank" href="https://www.youtube.com/watch?v=yCvEt-aT77M">    
+                            <h2><i class='link-color bx bx-link-external en-l'>Youtube Link</i></h2></a>    
+                </div>
+                
+                <div class="subtitles text-color fr-l" >
+                    <h2 class="fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h2>
+                        <a lang="fr" class="link-default text-color fr-l" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
+                            <h2 lang="fr"><i class='link-color bx bxl-github fr-l'>Lien GitHub</i></h2></a>
+                        <a lang="fr" class="link-default text-color fr-l" target="_blank" href="https://www.youtube.com/watch?v=yCvEt-aT77M">    
+                            <h2><i class='link-color bx bx-link-external fr-l'>Lien Youtube</i></h2></a>
+                </div>
+
+            </div> 
 
         </section>
+        
         <!--============================== WORK ==============================-->
         <section class="work section" id="work">
 
             <h2 class="section-title flex-center en-l">Work</h2>
-            <h2 class="section-title flex-center fr-l">Mes Projets</h2>
+            <h2 lang="fr" class="section-title flex-center fr-l">Mes Projets</h2>
 
             <div class="work__container bd-grid flex-center">
                 <!--============================== Reservia ==============================-->
@@ -289,8 +264,8 @@
                     </a>
 
                     <div class="work__linkContain flex-column">
-                        <h1 class="work__h1 en-l">Réservia, Website of vacation booking</h1>
-                        <h1 class="work__h1 fr-l">Réservia, site de Reecherche et de réservation de vacances</h1>
+                        <h2 class="work__h1 en-l">Réservia, Website of vacation booking</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Réservia, site de Recherche et de réservation de vacances</h2>
 
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/Reservia">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
@@ -304,8 +279,8 @@
                     </a>
                     
                     <div class="work__linkContain flex-column">   
-                        <h1 class="work__h1 en-l">Oh My Food website to find out all the restaurants near you !</h1>
-                        <h1 class="work__h1 fr-l">Oh My Food site pour trouver tous les restaurants à proximité</h1>
+                        <h2 class="work__h1 en-l">Oh My Food website to find out all the restaurants near you !</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Oh My Food site pour trouver tous les restaurants à proximité</h2>
 
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/OhMyFood">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
@@ -319,8 +294,8 @@
                     </a>
 
                     <div class="work__linkContain flex-column">  
-                        <h1 class="work__h1 en-l">La Chouette Agence, Design agency, help companies to be more attractive</h1>
-                        <h1 class="work__h1 fr-l">La Chouette Agence, Agence Design, Aide les entreprise a devenir attractives</h1>
+                        <h2 class="work__h1 en-l">La Chouette Agence, Design agency, help companies to be more attractive</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">La Chouette Agence, Agence Design, Aide les entreprise a devenir attractives</h2>
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/La-Chouette-Agence">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
                     </div>
@@ -333,8 +308,8 @@
                     </a>
 
                     <div class="work__linkContain flex-column">  
-                        <h1 class="work__h1 en-l">Kanap, Webshop where you can find and buy couch</h1>
-                        <h1 class="work__h1 fr-l">Kanap, Boutique en ligne d'achat de canapés</h1>
+                        <h2 class="work__h1 en-l">Kanap, Webshop where you can find and buy couch</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Kanap, Boutique en ligne d'achat de canapés</h2>
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/Kanap">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
                     </div>    
@@ -343,12 +318,12 @@
                 <!--============================== Hot Takes ==============================-->
                 <div class="flex-center">
                     <a href="https://github.com/Stephane-OC/Piquante" target="_blank" class="work__img">
-                        <img class="" src="assets/img/Hot Takes.png" alt="Hot Takes Project">
+                        <img class="" src="assets/img/Hot_Takes.png" alt="Hot Takes Project">
                     </a>
 
                     <div class="work__linkContain flex-column">    
-                        <h1 class="work__h1 en-l">API REST created for the web site Piquante with MongonDB</h1>
-                        <h1 class="work__h1 fr-l">Réalisation d'une API REST pour le site Piquante avec MongonDB</h1>
+                        <h2 class="work__h1 en-l">API REST created for the web site Piquante with MongonDB</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Réalisation d'une API REST pour le site Piquante avec MongonDB</h2>
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/Piquante">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
                     </div>    
@@ -361,8 +336,8 @@
                     </a>
 
                     <div class="work__linkContain flex-column">   
-                        <h1 class="work__h1 en-l">Corporation Social Media, FrontEnd created with VueJs and BackEnd by DB SQL</h1>
-                        <h1 class="work__h1 fr-l">Réseau Social d'entreprise FrontEnd réalisé avec VueJs et BackEnd avec DB SQL</h1>
+                        <h2 class="work__h1 en-l">Corporation Social Media, FrontEnd created with VueJs and BackEnd by DB SQL</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Réseau Social d'entreprise FrontEnd réalisé avec VueJs et BackEnd avec DB SQL</h2>
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/Groupomania">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
                     </div>        
@@ -375,12 +350,12 @@
                     </a>
 
                     <div class="work__linkContain flex-column">
-                        <h1 class="work__h1 en-l">Cruella's Birthday vidéo "Introduction" created with CSS Animations</h1>
-                        <h1 class="work__h1 fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h1>
+                        <h2 class="work__h1 en-l">Cruella's Birthday vidéo "Introduction" created with CSS Animations</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h2>
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Intro">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
-                        <a class="link-default text-color" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Intro/">
-                            <i class='link-color bx bx-link-external'>Page Link</i></a>
+                        <a class="link-default text-color" target="_blank" href="https://youtu.be/sJ8hM24kiMI">
+                            <i class='link-color bx bx-link-external'>Youtube Link</i></a>
                     </div>
                 </div> 
 
@@ -391,12 +366,12 @@
                     </a>
 
                     <div class="work__linkContain flex-column">
-                        <h1 class="work__h1 en-l">Cruella's Birthday vidéo "Transition" created with CSS Animations</h1>
-                        <h1 class="work__h1 fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h1>
+                        <h2 class="work__h1 en-l">Cruella's Birthday vidéo "Transition" created with CSS Animations</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h2>
                         <a class="link-default text-color" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Transitions">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
-                        <a class="link-default text-color" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Transitions/">
-                            <i class='link-color bx bx-link-external'>Page Link</i></a>
+                        <a class="link-default text-color" target="_blank" href="https://youtu.be/P0LOIDXslWk">
+                            <i class='link-color bx bx-link-external'>Youtube Link</i></a>
                     </div>
                 </div> 
 
@@ -407,13 +382,12 @@
                     </a>
 
                     <div class="work__linkContain flex-column">
-                        <h1 class="work__h1 en-l">Cruella's Birthday vidéo "Generic" created with CSS Animations</h1>
-                        <h1 class="work__h1 fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h1>
+                        <h2 class="work__h1 en-l">Cruella's Birthday vidéo "Generic" created with CSS Animations</h2>
+                        <h2 lang="fr" class="work__h1 fr-l">Vidéo d'aniversaire de Cruella avec Animations CSS</h2>
                         <a class="link-default" target="_blank" href="https://github.com/Stephane-OC/CruellaDk-Birthday-Generic">
                             <i class='link-color bx bxl-github'>GitHub Link</i></a>
-                        <a class="link-default" target="_blank" href="https://stephane-oc.github.io/CruellaDk-Birthday-Generic/">
-                            <i class='link-color bx bx-link-external'>Page Link</i></a>
-                       
+                        <a class="link-default" target="_blank" href="https://youtu.be/jpUCKa0yNd0">
+                            <i class='link-color bx bx-link-external'>Youtube Link</i></a>
                     </div>
                 </div> 
 
@@ -424,9 +398,6 @@
         <section class="contact section" id="contact">
             <h2 class="section-title">Contact</h2>
             <div class="contact__container bd-grid">
-                <div class="about__img">
-                    <img src="" alt="">
-                </div>
 
                 <div class="en-l">
                     <h2 class="contact__subtitle en-l">Keep in  touch !</h2>
@@ -438,9 +409,9 @@
                         So if you want to share about your experience that will be a pleasure !
                     </p>
                 </div>
-                <div class="fr-l flex-center">
-                    <h2 class="contact__subtitle fr-l">Restons en contact !</h2>
-                    <p class="contact__text text-color fr-l"> Si tu aimes mon profil 
+                <div lang="fr" class="fr-l flex-center">
+                    <h2 lang="fr" class="contact__subtitle fr-l">Restons en contact !</h2>
+                    <p lang="fr" class="contact__text text-color fr-l"> Si tu aimes mon profil 
                         restons en contact je suis ouvert à de nouvelles opportunités !
                         Si tu veux juste m'envoyer un message pour partager ton expérience, tu peux m'envoyer un e-mail !
                         Nous avons la plus belle des communautés et c'est être ensemble qui nous fait donner le meilleurs de nous !
@@ -451,15 +422,12 @@
                 </div>
                 <div class="contact__data text-color flex-center">
  
-                    <a href="mailto:stephane.fons.pro@gmail.com" class="button bottom">Contact</a>
-                    <a href="assets/pdf/CV Stephane Fons.pdf" class="button bottom"
+                    <a href="mailto:contact@stephane-dev.com" class="button bottom">Contact</a>
+                    <a href="assets/pdf/CV_Stephane_Fons.pdf" class="button bottom"
                         download="CV Stephane Fons.pdf">Download CV</a>
-
+                    
+                </div>
             </div>
-
-            
-
-        </div>
         </section>
     </main>
 
@@ -475,7 +443,6 @@
         <div class="footer__social flex-center">
             <a href="#" id="frSwitch" class="footer__lang">Fr Website</a>
             <a href="#" id="enSwitch" class="footer__lang">En Website</a>
-
         </div>
 
     </footer>

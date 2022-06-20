@@ -116,6 +116,3 @@ enButton.addEventListener('click', () => {
     document.body.classList.remove(frLanguage)
 
 })
-
-
-
