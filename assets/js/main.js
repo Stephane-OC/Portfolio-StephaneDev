@@ -46,7 +46,6 @@ function scrollActive(){
 }
 
 
-
 /*=============================================================
 ========================                =======================
 ======================= DARK LIGHT THEME ======================
@@ -83,8 +82,8 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+    
 })
-
 
 
 /*=============================================================
@@ -107,7 +106,6 @@ frButton.addEventListener('click', () => {
     document.body.classList.remove(enLanguage)
     
 })
-
 
 
 // En Language Button Swith

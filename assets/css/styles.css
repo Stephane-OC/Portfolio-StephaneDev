@@ -17,13 +17,11 @@ body {
 :root {
   --header-height: 3rem;
   --font-semi: 600;
-
   /*===== Colors =====*/
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
   --first-color: hsl(var(--hue-color), 89%, 60%);
-
   /*===== Typography =====*/
   --body-font: 'Quicksand', sans-serif;
   --big-font-size: 2rem;
@@ -41,7 +39,7 @@ body {
 }
 
 .background {
-  background-color: aliceblue;
+  background-color: rgba(88, 141, 190, 0.349);
 }
 
 .cover {
@@ -139,7 +137,7 @@ input[type=radio] {
   position: relative;
   width: 100%;
   height: 100%;
-  margin-bottom: 12em;
+  margin-bottom: 10em;
 }
 
 img {
@@ -307,13 +305,12 @@ img {
   text-align: initial;
 }
 
-
 /*======================================================================
 ============================= Portfolio Loader =========================
 ======================================================================*/
 
 #app {
-  background: #172A44;
+  background: rgb(10, 10, 10);
   margin: 0;
   padding: 0;
   height: 100vh;
@@ -322,7 +319,8 @@ img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(rgb(10, 10, 10), #172A44);
+  background: linear-gradient(rgba(10, 10, 10, 0.6), rgba(0, 0, 0, 0.9)), 
+  repeating-linear-gradient(0, transparent, transparent 2px, black 3px, black 3px), url("/assets/img/Dev.jpg");
   background-position: center;
   background-size: cover;
   z-index: 1;
@@ -804,7 +802,6 @@ body.dark-theme {
 ====Some Class are added or removed with JS to change Website language=====
 =========================================================================*/
 
-
 .fr-lang .en-l {
   display: none;
 }
@@ -812,7 +809,6 @@ body.dark-theme {
 .fr-lang .fr-l {
   display: block;
 }
-
 
 .en-lang .fr-l {
   display: none;
@@ -826,15 +822,12 @@ body.dark-theme {
   display: none;
 }
 
-
-
 /*===== BASE =====*/
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
-
 
 html {
   scroll-behavior: smooth;
@@ -923,7 +916,6 @@ img {
   font-weight: var(--font-semi);
 }
 
-
 .picsContein {
   margin-left: 0em;
   height: 16em;
@@ -957,7 +949,17 @@ img {
   }
 
   .cards {
-    margin-bottom: 20em;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 22em;
+  }
+
+  .cards {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 12em;
   }
 }
 
@@ -1203,7 +1205,6 @@ img {
   transform: scale(1.1);
 }
 
-
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
@@ -1282,6 +1283,9 @@ img {
     width: 12em;
     box-sizing: border-box;
     margin-top: 2em;
+  }
+  .cards {
+    margin-bottom: 10em;
   }
 }
 
@@ -1364,6 +1368,10 @@ img {
     width: 13em;
     margin-top: 10em;
     left: 22em;
+  }
+
+  .cards {
+    margin-bottom: 17em;
   }
 
   .dark-theme .nav__menu {
@@ -1457,10 +1465,6 @@ img {
     margin-top: 0.4em;
   }
 
-  .cards {
-    margin-bottom: 20em;
-  }
-
   .picsContein {
     height: 18em;
     width: 16em;
@@ -1470,6 +1474,10 @@ img {
 
   .nav__menu {
     background-color: white;
+  }
+
+  .cards {
+    margin-bottom: 18em;
   }
 
   .dark-theme .nav__menu {
@@ -1499,10 +1507,6 @@ img {
   .link-color {
     font-size: 1.1em;
     margin-top: 0.4em;
-  }
-
-  .cards {
-    margin-bottom: 20em;
   }
 
   .picsContein {
@@ -1545,8 +1549,8 @@ img {
     margin-top: 0.4em;
   }
 
-  .cards {
-    margin-bottom: 20em;
+  .nav__menu {
+    background-color: white;
   }
 
   .picsContein {
@@ -1584,16 +1588,17 @@ img {
     width: 18em;
   }
 
+  .nav__menu {
+    background-color: white;
+  }
+
   .img {
     height: 20em;
     width: 40em;
   }
 
   .cards {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-bottom: 25em;
+    margin-bottom: 22em;
   }
 
   .subtitles {
